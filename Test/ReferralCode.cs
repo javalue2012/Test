@@ -6,19 +6,29 @@ namespace Test
 {
        public class ReferralCode : IUserMatcher
     {
-
         public bool IsMatch(User newUser, User existingUser)
         {
-
             try
             {
-                if (existingUser.Name != newUser.Name)
+                int dem = 0;
+                for (int i = 0; i < newUser.ReferralCode.Count(); i++)
                 {
-                    return true;
+                    
+                    for(int j = 0; j< existingUser.ReferralCode.Count(); j++)
+                    {
+                        if(newUser.ReferralCode[i] == existingUser.ReferralCode[j])
+                        {
+                            dem++;
+                        }
+                    }
+                }
+                if (dem == 3)
+                {
+                    return false;
                 }
                 else
                 {
-                    return false;
+                    return true;
                 }
             }
             catch (Exception)

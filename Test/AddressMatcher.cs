@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using static Test.User;
 
 namespace Test
@@ -21,8 +22,6 @@ namespace Test
             location2.name = existingUser.Name;
             try
             {
-                
-                
                 if (Compare(location1, location2) == true)
                 {
                     return true;
@@ -39,10 +38,14 @@ namespace Test
         }
         public static bool Compare(Compareaddress location1, Compareaddress location2)
         {
-           for(int i=1; i< location1.StreetAddress.Count(); i++)
+            string pattern = "@!^.*$";
+            string str1 = Regex.Replace(location1.StreetAddress, pattern, " ");
+            string str2 = Regex.Replace(location2.StreetAddress, pattern, " ");
+            if(str1 == str2 && location1.name == location2.name)
             {
-
+                return false;
             }
+          
             return true;
         }
     }
