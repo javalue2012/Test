@@ -5,23 +5,8 @@ namespace Test
     {
         public bool IsMatch(User newUser, User existingUser)
         {
-            double radius = 500.0;
-            try
-            {
-                if (CalculateDistance(newUser.Address.Latitude, newUser.Address.Longitude, existingUser.Address.Latitude, existingUser.Address.Longitude) < radius)
-                { 
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            }
-            catch (Exception)
-            {
-                return false;
-            } 
+            double distance = CalculateDistance(newUser.Address.Latitude, newUser.Address.Longitude, existingUser.Address.Latitude, existingUser.Address.Longitude));
+            return distance < 500;
         }
         static double CalculateDistance(decimal lat1, decimal lon1, decimal lat2, decimal lon2)
         {
