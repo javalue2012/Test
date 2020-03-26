@@ -9,5 +9,6 @@ namespace Test
     public Address Address { get; set; }
     public string Name { get; set; }
     public string ReferralCode { get; set; }
+    public List<User> listuser { get; set;  }
     }
 }
