@@ -38,7 +38,8 @@ namespace Test
         }
         public static bool Compare(Compareaddress location1, Compareaddress location2)
         {
-            string pattern = "@!^.*$";
+            string removableChars = Regex.Escape(@"@&'()<>#");
+            string pattern = "[" + removableChars + "]";
             string str1 = Regex.Replace(location1.StreetAddress, pattern, " ");
             string str2 = Regex.Replace(location2.StreetAddress, pattern, " ");
             if(str1 == str2 && location1.name == location2.name)
