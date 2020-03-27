@@ -12,7 +12,7 @@ namespace Tests
         [Test]
         public void IsMatch_MatchDistance_ReturnTrue()
         {
-            var distanceMatcher = new DistanceMatcher();
+            var distanceMatcher = new UserMatcher();
             Address address1 = new Address()
             {
                 Suburb = "Level 3",

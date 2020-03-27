@@ -12,7 +12,7 @@ namespace Tests
         [Test]
         public void IsMatch_MatchReferral_ReturnTrue()
         {
-            var referralMatcher = new ReferralMatcher();
+            var referralMatcher = new UserMatcher();
             Address address1 = new Address()
             {
                 Suburb = "Level 3",

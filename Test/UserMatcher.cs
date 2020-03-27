@@ -4,9 +4,20 @@ using static Test.User;
 
 namespace Test
 {
-    public interface IUserMatcher
+    public class UserMatcher : IUserMatcher
     {
-        bool IsMatch(User newUser, User existingUser);
+    public bool IsMatch(User newUser, User existingUser)
+        {
+            AddressMatcher addressMatcher = new AddressMatcher();
+            DistanceMatcher distanceMatcher = new DistanceMatcher();
+            ReferralMatcher referralMatcher = new ReferralMatcher();
 
+            if (addressMatcher.IsMatch(newUser, existingUser)) return true;
+            
+            if (distanceMatcher.IsMatch(newUser, existingUser)) return true;
+
+            return referralMatcher.IsMatch(newUser, existingUser);
+
+        }
     }
 }

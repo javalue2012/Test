@@ -15,3 +15,4 @@ C:\Users\luong.nguyen\Downloads\Test\Test\obj\Debug\netstandard2.0\Test.Assembly
 C:\Users\luong.nguyen\Downloads\Test\Test\obj\Debug\netstandard2.0\Test.AssemblyInfo.cs
 C:\Users\luong.nguyen\Downloads\Test\Test\obj\Debug\netstandard2.0\Test.dll
 C:\Users\luong.nguyen\Downloads\Test\Test\obj\Debug\netstandard2.0\Test.pdb
+C:\Users\luong.nguyen\Downloads\Test\Test\obj\Debug\netstandard2.0\Test.csprojAssemblyReference.cache

@@ -3,7 +3,7 @@ using Test;
 
 namespace Tests
 {
-    public class AddressMatcherTest
+    public class UserMatcherTest
     {
         [SetUp]
         public void Setup()
@@ -12,7 +12,7 @@ namespace Tests
         [Test]
         public void IsMatch_MatchAddress_ReturnTrue()
         {
-            var addressMatcher = new AddressMatcher();
+            var addressMatcher = new UserMatcher();
             Address address1 = new Address()
             {
                 Suburb = "Level 3",
