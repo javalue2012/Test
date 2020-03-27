@@ -10,6 +10,7 @@ namespace Test
         {
             return compareCode(newUser.ReferralCode, existingUser.ReferralCode);
         }
+
         public string[] generateCode(string newReferralCode)
         {
             string[] arrCode = new string[] { newReferralCode };
