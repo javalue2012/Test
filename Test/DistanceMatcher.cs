@@ -5,10 +5,10 @@ namespace Test
     {
         public bool IsMatch(User newUser, User existingUser)
         {
-            double distance = CalculateDistance(newUser.Address.Latitude, newUser.Address.Longitude, existingUser.Address.Latitude, existingUser.Address.Longitude));
-            return distance < 500;
+            double distance = CalculateDistance(newUser.Address.Latitude, newUser.Address.Longitude, existingUser.Address.Latitude, existingUser.Address.Longitude);
+            return distance > 500;
         }
-        static double CalculateDistance(decimal lat1, decimal lon1, decimal lat2, decimal lon2)
+        public static double CalculateDistance(decimal lat1, decimal lon1, decimal lat2, decimal lon2)
         {
             double R = 6371; // km
             double distance = 0.0;
@@ -20,6 +20,7 @@ namespace Test
               Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
             double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
             distance = R * c;
+
             return (distance * 1000); //metres
         }
     }

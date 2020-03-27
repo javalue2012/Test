@@ -3,16 +3,16 @@ using Test;
 
 namespace Tests
 {
-    public class AddressMatcherTest
+    public class DistanceMatcherTest
     {
         [SetUp]
         public void Setup()
         {
         }
         [Test]
-        public void IsMatch_MatchAddress_ReturnTrue()
+        public void IsMatch_MatchDistance_ReturnTrue()
         {
-            var addressMatcher = new AddressMatcher();
+            var distanceMatcher = new DistanceMatcher();
             Address address1 = new Address()
             {
                 Suburb = "Level 3",
@@ -43,9 +43,11 @@ namespace Tests
                 ReferralCode = "ABC123"
             };
 
-            var isMatch = addressMatcher.IsMatch(newUser, existingUser);
-            
+            var isMatch = distanceMatcher.IsMatch(newUser, existingUser);
+
             Assert.True(isMatch);
         }
+       
+         
     }
 }

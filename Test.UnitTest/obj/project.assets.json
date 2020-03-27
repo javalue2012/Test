@@ -5770,23 +5770,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\luong.nguyen\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Test\\Test.UnitTest\\Test.UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\luong.nguyen\\Downloads\\Test\\Test.UnitTest\\Test.UnitTest.csproj",
       "projectName": "Test.UnitTest",
-      "projectPath": "D:\\Test\\Test.UnitTest\\Test.UnitTest.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Test\\Test.UnitTest\\obj\\",
+      "projectPath": "C:\\Users\\luong.nguyen\\Downloads\\Test\\Test.UnitTest\\Test.UnitTest.csproj",
+      "packagesPath": "C:\\Users\\luong.nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luong.nguyen\\Downloads\\Test\\Test.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luong.nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5799,8 +5799,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Test\\Test\\Test.csproj": {
-              "projectPath": "D:\\Test\\Test\\Test.csproj"
+            "C:\\Users\\luong.nguyen\\Downloads\\Test\\Test\\Test.csproj": {
+              "projectPath": "C:\\Users\\luong.nguyen\\Downloads\\Test\\Test\\Test.csproj"
             }
           }
         }
