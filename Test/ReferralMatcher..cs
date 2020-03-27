@@ -10,26 +10,26 @@ namespace Test
         {
             return compareCode(newUser.ReferralCode, existingUser.ReferralCode);
         }
-        public string[] generateCode(string code)
+        public string[] generateCode(string newReferralCode)
         {
-            string[] arrCode = new string[] { code };
-            string[] arrayCodes = new string[code.Length - 1];
-            arrayCodes[0] = code;
+            string[] arrCode = new string[] { newReferralCode };
+            string[] arrayCodes = new string[newReferralCode.Length - 1];
+            arrayCodes[0] = newReferralCode;
 
-            for (int i = 1; i < code.Length - 1; i++)
+            for (int i = 1; i < newReferralCode.Length - 1; i++)
             {
                 string newCode = "";
-                for (int j = 0; j < code.Length; j++)
+                for (int j = 0; j < newReferralCode.Length; j++)
                 {
                     if (i == j + 1)
                     {
-                        newCode = newCode + code[i + 1];
+                        newCode = newCode + newReferralCode[i + 1];
                     }
                     else if (i == j - 1)
                     {
-                        newCode = newCode + code[i - 1];
+                        newCode = newCode + newReferralCode[i - 1];
                     }
-                    else newCode = newCode + code[j];
+                    else newCode = newCode + newReferralCode[j];
                 }
                 arrayCodes[i] = newCode;
             }
@@ -37,17 +37,24 @@ namespace Test
             return arrayCodes;
         }
 
-        public bool compareCode(string code1, string code2)
+        public bool compareCode(string newReferralCode, string existingReferralCode)
         {
-            string[] arrayCodes = generateCode(code1);
-
-            for (int i = 0; i < arrayCodes.Length; i++)
+            if(newReferralCode.Length != existingReferralCode.Length)
             {
-                if (arrayCodes[i] == code2)
-
-                    return true;
+                return false;
             }
+            else
+            {
+                string[] arrayCodes = generateCode(newReferralCode);
 
+                for (int i = 0; i < arrayCodes.Length; i++)
+                {
+                    if (arrayCodes[i] == existingReferralCode)
+
+                        return true;
+                }
+            }
+            
             return false;
         }
     }
