@@ -8,7 +8,7 @@ namespace Test
     {
         public bool IsMatch(User newUser, User existingUser)
         {
-            return compareCode(newUser.ReferralCode, existingUser.ReferralCode);
+            return compareReferralCode(newUser.ReferralCode, existingUser.ReferralCode);
         }
 
         public string[] generateCode(string newReferralCode)
@@ -38,7 +38,7 @@ namespace Test
             return arrayCodes;
         }
 
-        public bool compareCode(string newReferralCode, string existingReferralCode)
+        public bool compareReferralCode(string newReferralCode, string existingReferralCode)
         {
             if(newReferralCode.Length != existingReferralCode.Length)
             {

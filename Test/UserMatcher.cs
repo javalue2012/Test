@@ -7,5 +7,6 @@ namespace Test
     public interface IUserMatcher
     {
         bool IsMatch(User newUser, User existingUser);
+
     }
 }
